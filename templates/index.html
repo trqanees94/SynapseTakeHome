@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class = "jumbotron text-center">
+      <h1>Welcome to the SynapseFI App</h1>
+      <p class = "lead"> This application shows you details about the user and their nodes</p>
+    </div>
+
+
+
+     <form action="/getUserData">
+      <button name="forwardBtn" type="submit">Get User Data</button>
+    </form>
+
+  <table border = 1>
+    <tr>
+      <th>User Name</th>
+      <th>User Email</th>
+      <th>User Entity</th>
+    </tr>
+      <tr>
+        <th>{{userData1}}</th>
+        <td>{{userData2}}</td>
+        <td>{{userData3}}</td>
+      </tr>
+
+  </table>
+
+  <table border = 1>
+    <tr>
+      <th>Bank nickname</th>
+      <th>Bank Ammount</th>
+    </tr>
+    {% for node in nodeData %}
+
+      <tr>
+        <td>{{node[0]}}</td>
+        <td>{{node[1]}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+
+
+{% endblock %}
