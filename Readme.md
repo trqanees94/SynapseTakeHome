@@ -1,3 +1,6 @@
+This is a simple app that calls the SynapseFI API and displays the user's information to the view.
+
+
 In order to run this Flask App you will need to install Flask in your workspace.
 
 Once your flask app is running you will need to import a few libraries
