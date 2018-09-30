@@ -1,0 +1,4 @@
+In order to run this Flask App you will need to install Flask in your workspace.
+
+Once your flask app is running you will need to import a few libraries
+  1)Import Flask, render_template, request, redirect
